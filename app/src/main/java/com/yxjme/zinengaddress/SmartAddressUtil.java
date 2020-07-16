@@ -2,7 +2,6 @@ package com.yxjme.zinengaddress;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -14,9 +13,11 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public abstract class SmartAddressUtil implements TextWatcher {
 
-
+    private static String  fileName = "area.json" ;
     private List<AddressBean> allDataList=new ArrayList<>();
     private List<Province> list =new ArrayList<>();
     private String result;
@@ -52,7 +53,8 @@ public abstract class SmartAddressUtil implements TextWatcher {
 
 
 
-    private static String  fileName = "area.json" ;
+
+
     /**
      * 获取地址列表
      *
